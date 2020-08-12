@@ -1,0 +1,15 @@
+{
+  "name": "getreviews",
+  "version": "1.0.0",
+  "description": "Funzione LAMBDA in Node per il GET delle recensioni.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FOX © 2019/20",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.662.0",
+    "mysql": "^2.18.1"
+  }
+}

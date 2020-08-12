@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/ic_dotted_square"
+        android:height="60dp"
+        android:width="60dp"/>
+    <item
+        android:drawable="@drawable/ic_add"
+        android:height="20dp"
+        android:width="20dp"
+        android:top="20dp"
+        android:right="20dp"
+        android:left="20dp" />
+</layer-list>

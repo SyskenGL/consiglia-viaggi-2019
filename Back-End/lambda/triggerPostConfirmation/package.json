@@ -1,0 +1,14 @@
+{
+  "name": "triggerpostconfirmation",
+  "version": "1.0.0",
+  "description": "Funzione LAMBDA in Node per l'assegnazione dell'immagine del profilo di default (trigger post conferma).",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FOX © 2019/20",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.661.0"
+  }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="reviewsManagementRoot" prefHeight="750.0" prefWidth="1040.0" styleClass="wrapper-content" stylesheets="@../styles/dark-theme.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.isw.cvoffice.controllers.ReviewsManagementController">
+   <children>
+      <Pane fx:id="reviewsExplorerContainer" layoutX="50.0" prefHeight="310.0" prefWidth="940.0" />
+      <Pane fx:id="reviewsApprovalPanelContainer" layoutX="50.0" layoutY="390.0" prefHeight="360.0" prefWidth="940.0" translateY="-50.0" />
+      <Pane fx:id="alertPane" layoutX="747.0" layoutY="661.0" prefHeight="75.0" prefWidth="279.0" styleClass="alert-pane" visible="false">
+         <children>
+            <Label fx:id="alertLabelMessage" layoutX="62.0" layoutY="33.0" prefWidth="203.0" styleClass="label-alert-message" wrapText="true" />
+            <ImageView fx:id="alertIcon" fitHeight="32.0" fitWidth="32.0" focusTraversable="true" layoutX="15.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="alertLabelTitle" layoutX="62.0" layoutY="14.0" prefHeight="17.0" prefWidth="203.0" styleClass="label-alert-title" />
+         </children></Pane>
+   </children>
+</AnchorPane>

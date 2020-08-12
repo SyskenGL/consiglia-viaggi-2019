@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_reviews_filters"
+    android:background="@drawable/shape_container_dark_navy"
+    android:layout_width="325dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_reviews_filters_filter_by"
+                android:fontFamily="@font/montserrat"
+                android:textSize="18sp"
+                android:textColor="@color/grayBlue"
+                android:layout_marginTop="20dp"
+                android:letterSpacing="0.05"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/grayBlue" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <cn.refactor.library.SmoothCheckBox
+                    android:id="@+id/fragment_reviews_filters_checkbox_five_stars"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:color_unchecked="@color/darkBlue"
+                    app:color_unchecked_stroke="@color/darkBlue"
+                    app:color_checked="@color/peach" />
+
+                <RatingBar
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:id="@+id/fragment_accommodation_facility_rating"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:isIndicator="true"
+                    android:rating="5"
+                    android:numStars="5"
+                    android:stepSize="0.1"
+                    android:theme="@style/RatingBar" />
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/fragment_reviews_filters_total_bar_five_stars"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    app:rcBackgroundColor="@color/darkBlue"
+                    app:rcProgress="70"
+                    app:rcProgressColor="@color/grayBlue" />
+
+                <TextView
+                    android:id="@+id/fragment_reviews_filters_amount_five_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/grayBlue" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <cn.refactor.library.SmoothCheckBox
+                    android:id="@+id/fragment_reviews_filters_checkbox_four_stars"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:color_unchecked="@color/darkBlue"
+                    app:color_unchecked_stroke="@color/darkBlue"
+                    app:color_checked="@color/peach" />
+
+                <RatingBar
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:isIndicator="true"
+                    android:rating="4"
+                    android:numStars="5"
+                    android:stepSize="0.1"
+                    android:theme="@style/RatingBar" />
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/fragment_reviews_filters_total_bar_four_stars"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    app:rcBackgroundColor="@color/darkBlue"
+                    app:rcProgress="70"
+                    app:rcProgressColor="@color/grayBlue" />
+
+                <TextView
+                    android:id="@+id/fragment_reviews_filters_amount_four_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/grayBlue" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <cn.refactor.library.SmoothCheckBox
+                    android:id="@+id/fragment_reviews_filters_checkbox_three_stars"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:color_unchecked="@color/darkBlue"
+                    app:color_unchecked_stroke="@color/darkBlue"
+                    app:color_checked="@color/peach" />
+
+                <RatingBar
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:isIndicator="true"
+                    android:rating="3"
+                    android:numStars="5"
+                    android:stepSize="0.1"
+                    android:theme="@style/RatingBar" />
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/fragment_reviews_filters_total_bar_three_stars"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    app:rcBackgroundColor="@color/darkBlue"
+                    app:rcProgress="70"
+                    app:rcProgressColor="@color/grayBlue" />
+
+                <TextView
+                    android:id="@+id/fragment_reviews_filters_amount_three_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/grayBlue" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <cn.refactor.library.SmoothCheckBox
+                    android:id="@+id/fragment_reviews_filters_checkbox_two_stars"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:color_unchecked="@color/darkBlue"
+                    app:color_unchecked_stroke="@color/darkBlue"
+                    app:color_checked="@color/peach" />
+
+                <RatingBar
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="2"
+                    android:stepSize="0.1"
+                    android:theme="@style/RatingBar" />
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/fragment_reviews_filters_total_bar_two_stars"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    app:rcBackgroundColor="@color/darkBlue"
+                    app:rcProgress="70"
+                    app:rcProgressColor="@color/grayBlue" />
+
+                <TextView
+                    android:id="@+id/fragment_reviews_filters_amount_two_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/grayBlue" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <cn.refactor.library.SmoothCheckBox
+                    android:id="@+id/fragment_reviews_filters_checkbox_one_star"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:color_unchecked="@color/darkBlue"
+                    app:color_unchecked_stroke="@color/darkBlue"
+                    app:color_checked="@color/peach" />
+
+                <RatingBar
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="1"
+                    android:stepSize="0.1"
+                    android:theme="@style/RatingBar" />
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/fragment_reviews_filters_total_bar_one_star"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    app:rcBackgroundColor="@color/darkBlue"
+                    app:rcProgress="70"
+                    app:rcProgressColor="@color/grayBlue" />
+
+                <TextView
+                    android:id="@+id/fragment_reviews_filters_amount_one_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/grayBlue" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:layout_gravity="center|start"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/fragment_reviews_filters_season"
+                    android:drawableStart="@drawable/ic_date"
+                    android:drawablePadding="7dp"
+                    android:drawableTint="@color/grayBlue"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@color/grayBlue"
+                    android:fontFamily="@font/open_sans_semibold" />
+
+                <HorizontalScrollView
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/fragment_reviews_filters_winter_filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fragment_reviews_filters_winter"
+                            app:chipIconTint="@color/white"
+                            app:chipBackgroundColor="@color/darkBlue" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/fragment_reviews_filters_summer_filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fragment_reviews_filters_summer"
+                            app:chipBackgroundColor="@color/darkBlue" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/fragment_reviews_filters_spring_filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fragment_reviews_filters_spring"
+                            app:chipBackgroundColor="@color/darkBlue"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/fragment_reviews_filters_autumn_filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fragment_reviews_filters_autumun"
+                            app:chipBackgroundColor="@color/darkBlue"/>
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_reviews_filters_order_by"
+                android:fontFamily="@font/montserrat"
+                android:textSize="18sp"
+                android:textColor="@color/grayBlue"
+                android:layout_marginTop="20dp"
+                android:letterSpacing="0.05"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/grayBlue" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/fragment_reviews_filters_rating"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:drawableStart="@drawable/ic_star"
+                        android:drawableTint="@color/grayBlue"
+                        android:drawablePadding="7dp"
+                        android:layout_marginEnd="15dp"
+                        android:textColor="@color/grayBlue"
+                        android:fontFamily="@font/open_sans_semibold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:drawableStart="@drawable/ic_public"
+                        android:drawableTint="@color/grayBlue"
+                        android:drawablePadding="7dp"
+                        android:text="@string/fragment_reviews_filters_publication_date"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="15dp"
+                        android:textColor="@color/grayBlue"
+                        android:fontFamily="@font/open_sans_semibold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:drawableStart="@drawable/ic_appreciation"
+                        android:drawableTint="@color/grayBlue"
+                        android:drawablePadding="7dp"
+                        android:text="@string/fragment_reviews_filters_appreciation"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="15dp"
+                        android:textColor="@color/grayBlue"
+                        android:fontFamily="@font/open_sans_semibold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_reviews_filters_rating_sort"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        app:ms_background_color="@color/darkBlue"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="100dp" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_reviews_filters_publication_date_sort"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        app:ms_background_color="@color/darkBlue"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="100dp" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_reviews_filters_appreciation_sort"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        app:ms_background_color="@color/darkBlue"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="100dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/fragment_reviews_filters_button_reset"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="@string/fragment_reviews_filters_reset"
+                android:textColor="@color/white"
+                android:textIsSelectable="false"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:icon="@drawable/ic_reset"
+                app:iconTint="@color/white"
+                app:backgroundTint="@color/red"
+                app:cornerRadius="25dp"
+                app:rippleColor="@color/darkNavy" />
+
+            <Button
+                android:id="@+id/fragment_reviews_filters_button_apply"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:layout_marginStart="15dp"
+                android:text="@string/fragment_reviews_filters_apply"
+                android:textColor="@color/white"
+                android:textIsSelectable="false"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:icon="@drawable/ic_check"
+                app:iconTint="@color/white"
+                app:backgroundTint="@color/livelyGreen"
+                app:cornerRadius="25dp"
+                app:rippleColor="@color/darkNavy" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

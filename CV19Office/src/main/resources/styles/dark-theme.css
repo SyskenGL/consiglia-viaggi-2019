@@ -1,0 +1,623 @@
+/* FONTS */
+
+    @font-face {
+        font-family: 'montserrat bold';
+        src: url('/fonts/montserrat/Montserrat-Bold.ttf');
+    }
+
+    @font-face {
+        font-family: 'montserrat semibold';
+        src: url('/fonts/montserrat/Montserrat-SemiBold.ttf');
+    }
+
+    @font-face {
+        font-family: 'montserrat regular';
+        src: url('/fonts/montserrat/Montserrat-Regular.ttf');
+    }
+
+    @font-face {
+        font-family: 'open sans regular';
+        src: url('/fonts/opensans/OpenSans-Regular.ttf');
+    }
+
+    @font-face {
+        font-family: 'open sans bold';
+        src: url('/fonts/opensans/OpenSans-Bold.ttf');
+    }
+
+    @font-face {
+        font-family: 'open sans semibold';
+        src: url('/fonts/opensans/OpenSans-SemiBold.ttf');
+    }
+
+
+/* COLOR */
+
+    * {
+        -fx-color-green: #4fbd81;
+        -fx-color-transparent-green: #9bdeba;
+        -fx-color-lively-green: #32db80;
+        -fx-color-orange : #ff9d00;
+        -fx-color-transparent-orange: #ffd899;
+        -fx-color-red: #f55164;
+        -fx-color-transparent-red: #ffabb5;
+        -fx-color-lively-red: #e02d42;
+        -fx-color-yellow: #e0df47;
+        -fx-color-blue: #4498dd;
+        -fx-color-primary: #3d486c;
+        -fx-color-secondary: #445175;
+        -fx-color-tertiary: #364061;
+        -fx-color-quaternary: #5d6c9e;
+        -fx-color-text: #d8daea;
+    }
+
+
+/* PANE */
+
+    .root {
+        -fx-background-color: -fx-color-primary;
+        -fx-background-radius: 15;
+    }
+
+    .wrapper-content {
+        -fx-background-color: -fx-color-primary;
+        -fx-background-radius: 0 0 15 0;
+    }
+
+    .status-pane {
+        -fx-background-color: -fx-color-primary;
+        -fx-background-radius: 0 15 0 0;
+    }
+
+    .menu-pane {
+        -fx-background-color: -fx-color-tertiary;
+        -fx-background-radius: 15 0 0 15;
+    }
+
+    .main-content-pane {
+        -fx-background-color: -fx-color-primary;
+        -fx-background-radius: 0 15 15 0;
+    }
+
+    .content-pane {
+        -fx-background-color: -fx-color-secondary;
+        -fx-background-radius: 15;
+    }
+
+    .alert-pane {
+        -fx-background-radius: 15;
+    }
+
+    .notification-pane {
+        -fx-background-color: -fx-color-primary;
+        -fx-background-radius: 15;
+    }
+
+    .content-pane:hover {
+        -fx-background-color: -fx-color-quaternary;
+        -fx-background-radius: 15;
+    }
+
+    .dialog-pane {
+        -fx-background-color: -fx-color-primary;
+        -fx-background-radius: 15;
+    }
+
+
+/* SCROLL PANE */
+
+    .scroll-pane .scroll-bar {
+        -fx-border-color: transparent;
+        -fx-background-radius: 15;
+        -fx-background-color: -fx-color-tertiary;
+        -fx-pref-width: 18;
+        -fx-pref-height: 18;
+    }
+
+    .scroll-pane .scroll-bar .thumb {
+        -fx-border-color: transparent;
+        -fx-background-radius: 15;
+        -fx-background-color: -fx-color-secondary;
+    }
+
+    .scroll-pane .scroll-bar .increment-button, .scroll-pane .scroll-bar .decrement-button {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-tertiary;
+        -fx-focus-color: transparent;
+    }
+
+    .scroll-pane .scroll-bar .decrement-arrow,.scroll-pane .scroll-bar .increment-arrow {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-text;
+        -fx-focus-color: transparent;
+    }
+
+    .rule-scroll-pane > .viewport {
+       -fx-background-color: transparent;
+    }
+
+    .rule-scroll-pane {
+        -fx-background-color: transparent;
+        -fx-hbar-policy: never;
+    }
+
+    .rule-scroll-pane .scroll-bar {
+        -fx-border-color: transparent;
+        -fx-background-color: transparent;
+    }
+
+    .rule-scroll-pane .scroll-bar:vertical {
+        -fx-unit-increment: 10 ;
+        -fx-block-increment: 50 ;
+    }
+
+    .rule-scroll-pane .scroll-bar .thumb {
+        -fx-border-color: transparent;
+        -fx-background-color: transparent;
+    }
+
+    .rule-scroll-pane .scroll-bar .increment-button, .rule-scroll-pane .scroll-bar .decrement-button {
+        -fx-border-color: transparent;
+        -fx-background-color: transparent;
+        -fx-focus-color: transparent;
+    }
+
+    .rule-scroll-pane .scroll-bar .decrement-arrow, .rule-scroll-pane .scroll-bar .increment-arrow {
+        -fx-border-color: transparent;
+        -fx-background-color: transparent;
+        -fx-focus-color: transparent;
+    }
+
+
+/* TABLE */
+
+    .table-view {
+       -fx-background-color: -fx-color-primary;
+       -fx-background-radius: 15 15 0 0;
+       -fx-background-insets: 0;
+    }
+
+    .table-view > .virtual-flow > .corner{
+        -fx-background-color: -fx-color-tertiary;
+    }
+
+    .table-view .placeholder .label {
+         -fx-text-fill: -fx-color-text;
+         -fx-font-family: 'open sans bold';
+         -fx-font-size: 11;
+     }
+
+    .table-view:focused {
+       -fx-background-color: -fx-color-primary;
+       -fx-background-radius: 15 15 0 0;
+       -fx-background-insets: 0;
+    }
+
+    .table-cell {
+        -fx-text-fill: -fx-color-text;
+        -fx-font-family: 'open sans regular'
+    }
+
+    .table-row-cell:odd {
+        -fx-background-color: -fx-color-primary;
+        -fx-table-cell-border-color: transparent;
+    }
+
+    .table-row-cell:even {
+        -fx-background-color: -fx-color-tertiary;
+        -fx-table-cell-border-color: transparent;
+    }
+
+    .table-row-cell:selected {
+        -fx-background-color: -fx-color-quaternary;
+        -fx-table-cell-border-color: transparent;
+    }
+
+    .table-column {
+        -fx-alignment: CENTER;
+        -fx-background-insets: 0;
+    }
+
+    .table-view .column-header-background {
+        -fx-background-color: -fx-color-primary;
+        -fx-background-radius: 15 15 0 0;
+    }
+
+    .table-view .column-header-background .filler {
+        -fx-background-color: transparent;
+    }
+
+    .table-view .column-header, .table-view .filler {
+        -fx-background-color: transparent;
+        -fx-focus-color: transparent;
+        -fx-faint-focus-color: transparent;
+    }
+
+    .table-view .column-header .label{
+        -fx-text-fill: -fx-color-text;
+        -fx-padding: 10;
+        -fx-focus-color: transparent;
+        -fx-faint-focus-color: transparent;
+    }
+
+    .table-view .column-header .arrow {
+        -fx-background-color: -fx-color-text;
+    }
+
+
+/* SCROLL BAR */
+
+    .scroll-bar {
+        -fx-background-color: -fx-color-tertiary;
+        -fx-pref-width: 15;
+        -fx-pref-height: 15;
+    }
+
+    .scroll-bar .thumb {
+        -fx-background-color: -fx-color-secondary;
+        -fx-border-color: transparent;
+        -fx-background-radius: 15;
+    }
+
+    .scroll-bar .increment-button, .scroll-bar .decrement-button {
+        -fx-background-color: -fx-color-tertiary;
+        -fx-border-color: transparent;
+        -fx-focus-color:transparent
+    }
+
+    .scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
+        -fx-background-color: -fx-color-text;
+        -fx-border-color: transparent;
+        -fx-focus-color:transparent
+    }
+
+
+/* VERTICAL TEXT AREA */
+
+    .vertical-text-area {
+        -fx-text-fill: -fx-color-text;
+        -fx-font-size: 12;
+        -fx-font-family: 'open sans regular';
+        -fx-prompt-text-fill: -fx-color-secondary;
+        -fx-border-radius: 15;
+        -fx-background-radius: 15;
+        -fx-background-color: transparent;
+        -fx-highlight-fill: -fx-color-quaternary;
+    }
+
+    .vertical-text-area .scroll-pane {
+        -fx-background-color: -fx-color-tertiary;
+        -fx-background-radius: 15;
+        -fx-hbar-policy: never;
+        -fx-padding:  5 5 5 5;
+    }
+
+    .vertical-text-area .scroll-pane .viewport {
+        -fx-background-color: transparent;
+    }
+
+    .vertical-text-area .scroll-pane .content {
+        -fx-background-color: transparent;
+    }
+
+
+/* HORIZONTAL TEXT AREA */
+
+    .horizontal-text-area {
+        -fx-text-fill: -fx-color-text;
+        -fx-font-size: 14;
+        -fx-font-family: 'open sans bold';
+        -fx-prompt-text-fill: -fx-color-secondary;
+        -fx-border-radius: 15;
+        -fx-background-radius: 15;
+        -fx-background-color: transparent;
+        -fx-highlight-fill: -fx-color-quaternary;
+    }
+
+    .horizontal-text-area .scroll-pane {
+        -fx-background-color: -fx-color-tertiary;
+        -fx-background-radius: 15;
+        -fx-vbar-policy: never;
+        -fx-padding: 5 5 5 5;
+    }
+
+    .horizontal-text-area .scroll-pane .viewport {
+        -fx-background-color: transparent;
+    }
+
+    .horizontal-text-area .scroll-pane .content {
+        -fx-background-color: transparent;
+    }
+
+
+/* TEXT FIELD */
+
+    .text-field {
+        -fx-text-fill: -fx-color-text;
+        -fx-font-size: 14;
+        -fx-font-family: 'open sans bold';
+        -fx-prompt-text-fill: -fx-color-secondary;
+        -fx-border-radius: 15;
+        -fx-background-radius: 15;
+        -fx-background-color: -fx-color-primary;
+        -fx-highlight-fill: -fx-color-quaternary;
+    }
+
+
+/* BUTTON */
+
+    .button-sign-in {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-secondary;
+        -fx-background-radius: 20;
+        -fx-font-family: 'montserrat semibold';
+        -fx-font-size: 13;
+        -fx-text-fill: -fx-color-text;
+        -fx-background-insets: 0,0,0,0,0;
+    }
+
+    .button-sign-in:hover {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-quaternary;
+        -fx-background-radius: 20;
+        -fx-font-family: 'montserrat semibold';
+        -fx-text-fill: -fx-color-orange;
+    }
+
+    .button-sign-in:pressed {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-orange;
+        -fx-background-radius: 20;
+        -fx-font-family: 'montserrat semibold';
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .button-approve {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-green;
+        -fx-background-radius: 20;
+        -fx-font-family: 'montserrat semibold';
+        -fx-text-fill: -fx-color-text;
+        -fx-background-insets: 0,0,0,0,0;
+    }
+
+    .button-approve:hover {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-lively-green;
+        -fx-background-radius: 20;
+        -fx-font-family: 'montserrat semibold';
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .button-approve:pressed {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-green;
+        -fx-background-radius: 20;
+        -fx-font-family: 'montserrat semibold';
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .button-disapprove {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-red;
+        -fx-background-radius: 20;
+        -fx-font-family: 'montserrat semibold';
+        -fx-text-fill: -fx-color-text;
+        -fx-background-insets: 0,0,0,0,0;
+    }
+
+    .button-disapprove:hover {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-lively-red;
+        -fx-background-radius: 20;
+        -fx-font-family: 'montserrat semibold';
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .button-disapprove:pressed {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-red;
+        -fx-background-radius: 20;
+        -fx-font-family: 'montserrat semibold';
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .button-image {
+        -fx-border-color: transparent;
+        -fx-background-color: transparent;
+        -fx-background-insets: 0,0,0,0,0;
+    }
+
+    .button-image:hover {
+        -fx-border-color: transparent;
+        -fx-background-color: transparent;
+    }
+
+    .button-image:pressed {
+        -fx-border-color: transparent;
+        -fx-background-color: transparent;
+    }
+
+    .toggle-button-menu {
+        -fx-border-color: transparent;
+        -fx-background-color: transparent;
+        -fx-font-family: 'montserrat semibold';
+        -fx-text-fill: -fx-color-text;
+        -fx-font-size: 12;
+        -fx-background-radius: 0;
+        -fx-background-insets: 0,0,0,0,0;
+    }
+
+    .toggle-button-menu:hover {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-secondary;
+        -fx-font-family: 'montserrat semibold';
+        -fx-font-size: 13;
+        -fx-background-radius: 0;
+        -fx-text-fill: -fx-color-orange;
+    }
+
+    .toggle-button-menu:disabled {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-primary;
+        -fx-font-family: 'montserrat semibold';
+        -fx-font-size: 13;
+        -fx-opacity: 1;
+        -fx-background-radius: 0;
+        -fx-text-fill: -fx-color-orange;
+    }
+
+    .toggle-button-menu:selected {
+        -fx-border-color: transparent;
+        -fx-background-color: -fx-color-primary;
+        -fx-font-family: 'montserrat semibold';
+        -fx-font-size: 13;
+        -fx-background-radius: 0;
+        -fx-text-fill: -fx-color-orange;
+    }
+
+    .autopilot-radio-button {
+        -fx-rotate:180;
+        -fx-label-padding: 0 0 0 7;
+        -fx-font-family: "montserrat semibold";
+        -fx-text-fill: -fx-color-text;
+        -fx-font-size: 12;
+    }
+
+    .autopilot-radio-button .radio {
+        -fx-background-color: -fx-color-text;
+        -fx-background-insets: 0;
+    }
+
+    .autopilot-radio-button:hover {
+        -fx-rotate:180;
+        -fx-label-padding: 0 0 0 7;
+        -fx-font-family: "montserrat semibold";
+        -fx-text-fill: -fx-color-orange;
+        -fx-font-size: 12;
+    }
+
+    .autopilot-radio-button:selected .radio .dot {
+        -fx-background-color: -fx-color-secondary;
+        -fx-background-insets: 0;
+    }
+
+    .autopilot-radio-button > .text {
+        -fx-rotate: 180;
+    }
+
+
+/* LABEL */
+
+    .label-powered {
+        -fx-font-family: 'montserrat bold';
+        -fx-font-size: 9;
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .label-operator-name {
+        -fx-font-family: 'montserrat bold';
+        -fx-font-size: 14;
+        -fx-text-fill: -fx-color-orange;
+    }
+
+    .label-image-slider-count {
+        -fx-font-family: 'montserrat bold';
+        -fx-font-size: 14;
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .label-section-name {
+        -fx-font-family: 'montserrat bold';
+        -fx-font-size: 20;
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .label-rule {
+        -fx-font-family: 'open sans regular';
+        -fx-font-size: 14;
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .label-filters {
+        -fx-font-family: 'montserrat bold';
+        -fx-font-size: 14;
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .label-filters-section {
+        -fx-font-family: 'montserrat bold';
+        -fx-font-size: 12;
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .label-login {
+        -fx-font-family: 'montserrat bold';
+        -fx-font-size: 12;
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .label-info {
+        -fx-font-family: 'montserrat semibold';
+        -fx-text-fill: -fx-color-text;
+        -fx-font-size: 11;
+    }
+
+    .label-alert-title {
+        -fx-font-family: 'montserrat bold';
+        -fx-font-size: 13;
+    }
+
+    .label-alert-message {
+        -fx-font-family: 'montserrat semibold';
+        -fx-font-size: 11;
+    }
+
+
+/* IMAGE SLIDER */
+
+    .image-slider {
+        -fx-background-color: -fx-color-tertiary;
+        -fx-background-radius: 15;
+    }
+
+
+/* COMBO BOX */
+
+    .combo-box-base {
+        -fx-background-color: -fx-color-primary;
+        -fx-font-color: -fx-color-text;
+        -fx-font-size: 14;
+        -fx-font-family: 'montserrat bold';
+        -fx-background-radius: 15;
+    }
+
+    .combo-box-base .arrow {
+        -fx-background-color: -fx-color-text;
+    }
+
+    .combo-box-base:showing {
+        -fx-background-radius: 0;
+    }
+
+    .combo-box-base:hover {
+       -fx-background-color: -fx-color-orange;
+    }
+
+    .combo-box-popup .list-cell {
+        -fx-background-color: -fx-color-primary;
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .combo-box-popup .list-cell:hover {
+        -fx-background-color: -fx-color-quaternary;
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .combo-box .cell:selected {
+        -fx-text-fill: -fx-color-text;
+    }
+
+    .combo-box-popup .list-view{
+        -fx-background-color: -fx-color-primary;;
+    }

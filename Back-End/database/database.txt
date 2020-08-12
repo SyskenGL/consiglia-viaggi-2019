@@ -1,0 +1,278 @@
+/* FOX © 2019/20 */
+
+	/* --- TABELLE --- */
+
+		 CREATE TABLE `accommodation_facility` (
+			 `accommodation_facility_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+			 `name` varchar(50) NOT NULL,
+			 `type` varchar(50) NOT NULL,
+			 `country` varchar(50) NOT NULL,
+			 `administrative_area_level_1` varchar(50) NOT NULL,
+			 `administrative_area_level_2` varchar(50) NOT NULL,
+			 `administrative_area_level_3` varchar(50) NOT NULL,
+			 `locality` varchar(50) NOT NULL,
+			 `address` varchar(100) NOT NULL,
+			 `email` varchar(100) DEFAULT 'Not specified',
+			 `website` varchar(100) DEFAULT 'Not specified',
+			 `phone` varchar(15) DEFAULT 'Not specified',
+			 `description` varchar(1000) DEFAULT 'Not specified',
+			 `latitude` varchar(25) NOT NULL,
+			 `longitude` varchar(25) NOT NULL,
+			 `rating` tinyint(4) NOT NULL DEFAULT '5',
+			 `total_favorites` int(10) unsigned DEFAULT '0',
+			 `total_views` int(10) unsigned DEFAULT '0',
+			 `total_reviews` int(10) unsigned DEFAULT '0',
+			 `total_images` int(10) unsigned DEFAULT '0',
+			 `tags` varchar(1000) DEFAULT '',
+			 PRIMARY KEY (`accommodation_facility_id`)
+		);
+		
+		CREATE TABLE `favorite` (
+			 `accommodation_facility_id` int(10) unsigned NOT NULL,
+			 `user_id` varchar(50) NOT NULL,
+			 `timestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+			 PRIMARY KEY (`accommodation_facility_id`,`user_id`),
+			 CONSTRAINT `constraint_favorite_accommodation_facility_foreign_key` 
+				FOREIGN KEY (`accommodation_facility_id`) 
+				REFERENCES `accommodation_facility` (`accommodation_facility_id`) ON DELETE CASCADE
+		); 
+		
+		CREATE TABLE `feedback` (
+			 `review_id` int(10) unsigned NOT NULL,
+			 `user_id` varchar(50) NOT NULL,
+			 `type` varchar(25) NOT NULL,
+			 `timestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+			 PRIMARY KEY (`review_id`,`user_id`),
+			 CONSTRAINT `constraint_favorite_review_foreign_key` 
+				 FOREIGN KEY (`review_id`) 
+				 REFERENCES `review` (`review_id`) ON DELETE CASCADE,
+			 CONSTRAINT `constraint_feedback_type` 
+				CHECK ((`type` in ('thumb_up', 'thumb_down')))
+		);
+		
+		CREATE TABLE `history` (
+			 `accommodation_facility_id` int(10) unsigned NOT NULL,
+			 `user_id` varchar(50) NOT NULL,
+			 `timestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+			 PRIMARY KEY (`accommodation_facility_id`,`user_id`),
+			 CONSTRAINT `constraint_history_accommodation_facility_foreign_key` 
+				 FOREIGN KEY (`accommodation_facility_id`) 
+				 REFERENCES `accommodation_facility` (`accommodation_facility_id`) ON DELETE CASCADE
+		);
+		
+			
+		CREATE TABLE `notification` (
+			 `review_id` int(10) unsigned NOT NULL,
+			 `user_id` varchar(50) NOT NULL,
+			 `status` varchar(25) DEFAULT 'unmarked',
+			 `title` varchar(50) DEFAULT 'Not specified',
+			 `message` varchar(1000) DEFAULT 'Not specified',
+			 `type` varchar(25) NOT NULL,
+			 PRIMARY KEY (`review_id`,`user_id`),
+			 CONSTRAINT `constraint_notification_review_foreign_key` 
+				 FOREIGN KEY (`review_id`) 
+				 REFERENCES `review` (`review_id`) ON DELETE CASCADE,
+			 CONSTRAINT `constraint_notification_status` 
+				CHECK ((`status` in (_utf8mb3'marked',_utf8mb3'unmarked'))),
+			 CONSTRAINT `constraint_notification_type` 
+				CHECK ((`type` in ('positive', 'negative')))
+		);
+		
+		CREATE TABLE `review` (
+			 `review_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+			 `accommodation_facility_id` int(10) unsigned NOT NULL,
+			 `user_id` varchar(50) NOT NULL,
+			 `title` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+			 `description` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+			 `rating` tinyint(4) NOT NULL,
+			 `date_of_stay` date NOT NULL,
+			 `publication_date` date DEFAULT NULL,
+			 `total_likes` varchar(50) DEFAULT '0',
+			 `total_dislikes` varchar(50) DEFAULT '0',
+			 `total_images` varchar(100) DEFAULT '0',
+			 `status` varchar(100) DEFAULT 'pending',
+			 `expected_cancellation_date` date DEFAULT NULL,
+			 PRIMARY KEY (`review_id`),
+			 UNIQUE KEY `constraint_unique_review` (`accommodation_facility_id`,`user_id`),
+			 CONSTRAINT `constraint_review_accommodation_facility_foreign_key` 
+				 FOREIGN KEY (`accommodation_facility_id`) 
+				 REFERENCES `accommodation_facility` (`accommodation_facility_id`) ON DELETE CASCADE,
+			 CONSTRAINT `constraint_review_date` 
+				CHECK ((`date_of_stay` <= `publication_date`)),
+			 CONSTRAINT `constraint_review_rating` 
+				CHECK (((`rating` > 0) and (`rating` <= 5))),
+			 CONSTRAINT `constraint_review_statuc` 
+				CHECK ((`status` in ('pending', 'approved', 'disapproved')))
+		);
+			
+		CREATE TABLE `temporary_history` (
+			 `accommodation_facility_id` int(10) unsigned NOT NULL,
+			 `user_id` varchar(50) NOT NULL,
+			 `timestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+			 PRIMARY KEY (`accommodation_facility_id`,`user_id`),
+			 CONSTRAINT `constraint_temporary_history_accommodation_facility_foreign_key`
+				 FOREIGN KEY (`accommodation_facility_id`) 
+				 REFERENCES `accommodation_facility` (`accommodation_facility_id`) ON DELETE CASCADE
+		);
+	
+	
+	
+	/* --- FUNZIONI --- */	
+	
+		CREATE DEFINER=`admin`@`%` FUNCTION `calculate_distance_between_coords`(`acoord_latitude` VARCHAR(25), 
+																				`acoord_longitude` VARCHAR(25),
+																				`bcoord_latitude` VARCHAR(25), 
+																				`bcoord_longitude` VARCHAR(25)) 
+		RETURNS INT(11) 
+		DETERMINISTIC 
+		CONTAINS SQL
+		SQL SECURITY DEFINER 
+			RETURN 111.111 * DEGREES(ACOS(LEAST(1.0, COS(RADIANS(acoord_latitude)) 
+						   * COS(RADIANS(bcoord_latitude)) 
+						   * COS(RADIANS(acoord_longitude - bcoord_longitude)) 
+						   + SIN(RADIANS(acoord_latitude)) 
+						   * SIN(RADIANS(bcoord_latitude))))) * 1000
+	
+		CREATE DEFINER=`admin`@`%` FUNCTION `calculate_rating`(`accommodation_facility_id` INT) 
+		RETURNS INT(11) 
+		DETERMINISTIC 
+		CONTAINS SQL 
+		SQL SECURITY DEFINER 
+		BEGIN
+			DECLARE `total_rating` INT;
+			  SELECT sum(`review_view`.`rating`) INTO `total_rating`
+			  FROM `review_view`
+			  WHERE `review_view`.`accommodation_facility_id` = `accommodation_facility_id`
+			  AND `review_view`.`status` = "approved";
+			  IF `total_rating` IS NOT NULL THEN
+				RETURN (`total_rating`);  
+			  ELSE
+				RETURN 0;
+			  END IF;
+		END
+	
+	
+	/* --- EVENTI --- */	
+	
+		CREATE DEFINER=`admin`@`%` EVENT `clean_up_database` 
+		ON SCHEDULE EVERY 24 HOUR STARTS '2020-04-22 16:39:31' 
+		ON COMPLETION NOT PRESERVE ENABLE DO 
+		BEGIN
+		  DELETE FROM `review`
+			WHERE `expected_cancellation_date` < CURRENT_DATE;
+		  DELETE FROM `notification`
+			WHERE `status` = "marked";
+		  DELETE FROM `temp_chronology`;
+		END
+		
+		
+	/* --- TRIGGER --- */
+	
+		CREATE DEFINER=`admin`@`%` TRIGGER `decrease_favorites` 
+		AFTER DELETE ON `favorite` 
+		FOR EACH ROW 
+		BEGIN
+			UPDATE `accommodation_facility`
+				SET `accommodation_facility`.`total_favorites` = `accommodation_facility`.`total_favorites`-1
+				WHERE `accommodation_facility`.`accommodation_facility_id` = OLD.`accommodation_facility_id`
+		END
+	
+		CREATE DEFINER=`admin`@`%` TRIGGER `increases_favorites`
+		AFTER INSERT ON `favorite` 
+		FOR EACH ROW 
+		BEGIN
+			UPDATE `accommodation_facility`
+				SET `accommodation_facility`.`total_favorites` = `accommodation_facility`.`total_favorites`+1
+				WHERE `accommodation_facility`.`accommodation_facility_id` = NEW.`accommodation_facility_id`
+		END
+				
+		CREATE DEFINER=`admin`@`%` TRIGGER `decreases_feedback` 
+		AFTER DELETE ON `feedback` 
+		FOR EACH ROW 
+		BEGIN
+			IF OLD.`type` = "thumb_up" THEN
+				UPDATE `review`
+					SET `total_likes` = `total_likes`-1
+					WHERE `review`.`review_id` = OLD.`review_id`;
+			ELSE
+				UPDATE `review`
+					SET `total_dislikes` = `total_dislikes`-1
+					WHERE `review`.`review_id` = OLD.`review_id`;
+			END IF
+		END
+		
+		CREATE DEFINER=`admin`@`%` TRIGGER `increases_feedback`
+		AFTER INSERT ON `feedback` 
+		FOR EACH ROW 
+		BEGIN
+			IF NEW.`type` = "thumb_up" THEN 
+				UPDATE `review` 
+					SET `total_likes` = `total_likes`+1 
+					WHERE `review_id` = NEW.`review_id`; 
+			ELSE 
+				UPDATE `review`
+					SET `total_dislikes` = `total_dislikes`+1 
+					WHERE `review_id` = NEW.`review_id`; 
+			END IF
+		END
+		
+		CREATE DEFINER=`admin`@`%` TRIGGER `update_total_review` 
+		BEFORE UPDATE ON `review`
+		FOR EACH ROW 
+		BEGIN
+			DECLARE `new_total_reviews` INT;
+            IF NEW.`status` != OLD.`status` THEN
+				IF NEW.`status` = "approved" THEN
+					IF OLD.`status` = "disapproved" THEN
+						SET NEW.`expected_cancellation_date` = NULL;
+					END IF;
+					SET `new_total_reviews` = (
+						SELECT `accommodation_facility`.`total_reviews`+1
+							FROM `accommodation_facility`
+							WHERE `accommodation_facility`.`accommodation_facility_id` = NEW.`accommodation_facility_id`
+					);
+					UPDATE `accommodation_facility`
+					SET `accommodation_facility`.`total_reviews` = `new_total_reviews`, 
+							`accommodation_facility`.`rating` = ROUND((calculate_rating(NEW.`accommodation_facility_id`)+OLD.`rating`)/total_reviews)
+						WHERE `accommodation_facility`.`accommodation_facility_id` = NEW.`accommodation_facility_id`;   
+				ELSEIF NEW.`status` = "disapproved" THEN
+					IF OLD.`status` = "approved" THEN
+						SET `new_total_reviews` = (SELECT `accommodation_facility`.`total_reviews`-1
+													   FROM `accommodation_facility`
+													   WHERE `accommodation_facility`.`accommodation_facility_id` = NEW.`accommodation_facility_id`);
+						UPDATE `accommodation_facility`
+						SET `accommodation_facility`.`total_reviews` = `new_total_reviews`, 
+								`accommodation_facility`.`rating` = ROUND((calculate_rating(NEW.`accommodation_facility_id`)-OLD.`rating`)/`total_reviews`)
+							WHERE `accommodation_facility`.`accommodation_facility_id` = NEW.`accommodation_facility_id`;   		
+					END IF;	
+					SET NEW.`expected_cancellation_date` = DATE_ADD(CURRENT_DATE, INTERVAL 3 DAY);		
+				END IF;
+            END IF;
+		END
+		
+		CREATE DEFINER=`admin`@`%` TRIGGER `update_history` 
+		AFTER INSERT ON `temporary_history` 
+		FOR EACH ROW 
+		BEGIN
+			DECLARE `history_length` INTEGER;
+			DECLARE `accommodation_facility_id_history_to_delete` INTEGER;
+			SET `history_length` = (
+				SELECT COUNT(*)
+					FROM `history`
+					WHERE `history`.`user_id` = NEW.`user_id`
+			);
+			IF `history_length` > 99 THEN 
+				SET `accommodation_facility_id_history_to_delete` = (
+					SELECT `history`.`accommodation_facility_id`
+						FROM `history`
+						WHERE `history`.`user_id` = NEW.`user_id`
+						ORDER BY `history`.`timestamp` ASC 
+						LIMIT 1
+				);
+				DELETE FROM `history`
+					WHERE `history`.`user_id` = NEW.`user_id`
+					AND `history`.`accommodation_facility_id` = `accommodation_facility_id_history_to_delete`;
+			END IF;
+			REPLACE INTO `history`
+				VALUES (NEW.`accommodation_facility_id`, NEW.`user_id`, NEW.`timestamp`);
+		END

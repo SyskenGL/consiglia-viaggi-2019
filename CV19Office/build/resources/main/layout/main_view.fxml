@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane fx:id="mainViewRoot" prefWidth="1315.0" styleClass="root" stylesheets="@../styles/dark-theme.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.isw.cvoffice.controllers.MenuController">
+   <children>
+      <Pane prefHeight="800.0" prefWidth="275.0" styleClass="menu-pane">
+         <children>
+            <ToggleButton fx:id="toggleButtonReviewsManagement" alignment="BASELINE_LEFT" graphicTextGap="31.0" layoutY="280.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" styleClass="toggle-button-menu" text="Reviews Management">
+               <graphic>
+                  <ImageView fx:id="iconReviewsManagement" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="12.0">
+                     <image>
+                        <Image url="@../icons/ic_stamp_default.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleGroupMenu" />
+               </toggleGroup>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ToggleButton>
+            <Label contentDisplay="RIGHT" layoutX="79.0" layoutY="786.0" styleClass="label-powered" text="Powered by FOX ©" translateY="-5.0">
+               <graphic>
+                  <ImageView fitHeight="11.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/ic_fox_logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <ImageView fitHeight="111.0" fitWidth="132.0" layoutX="82.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/ic_cv_logo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelOperatorName" alignment="CENTER" contentDisplay="CENTER" layoutY="187.0" prefHeight="20.0" prefWidth="275.0" styleClass="label-operator-name" text="Operator Name" />
+            <ToggleButton fx:id="toggleButtonRulebook" alignment="BASELINE_LEFT" graphicTextGap="31.0" layoutY="330.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" styleClass="toggle-button-menu" text="Rulebook" toggleGroup="$toggleGroupMenu">
+               <graphic>
+                  <ImageView fx:id="iconRulebook" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="12.0">
+                     <image>
+                        <Image url="@../icons/ic_rulebook_default.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ToggleButton>
+            <ToggleButton fx:id="toggleButtonSignOut" alignment="BASELINE_LEFT" graphicTextGap="31.0" layoutY="580.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" styleClass="toggle-button-menu" text="Sign Out" toggleGroup="$toggleGroupMenu">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fx:id="iconSignOut" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="12.0">
+                     <image>
+                        <Image url="@../icons/ic_sign_out_default.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+         </children>
+      </Pane>
+      <BorderPane fx:id="contentWrapper" layoutX="275.0" prefHeight="800.0" prefWidth="1040.0" styleClass="main-content-pane">
+         <top>
+            <Pane prefHeight="50.0" prefWidth="1040.0" styleClass="status-pane" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutX="984.0" spacing="7.0" translateX="-12.0" translateY="12.0">
+                     <children>
+                        <Circle fx:id="buttonClose" fill="#f55164" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Circle>
+                        <Circle fx:id="buttonMinimize" fill="#ebcd38" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Circle>
+                        <Circle fx:id="buttonMaximize" fill="#4fbd81" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Circle>
+                     </children>
+                  </HBox>
+               </children></Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform('software.amazon.awssdk:bom:2.13.18')
+    implementation 'software.amazon.awssdk:lambda'
+    implementation 'software.amazon.awssdk:cognitoidentityprovider'
+    implementation 'software.amazon.awssdk:cognitoidentity'
+    implementation 'org.jetbrains:annotations:16.0.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'org.slf4j:slf4j-nop:1.7.25'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+}
+
+javafx {
+    modules = [
+            'javafx.base',
+            'javafx.controls',
+            'javafx.fxml',
+            'javafx.graphics',
+            'javafx.media',
+            'javafx.swing',
+            'javafx.web'
+    ]
+    version = '14.0.1'
+}
+
+mainClassName = 'it.isw.cvoffice.views.MainView'

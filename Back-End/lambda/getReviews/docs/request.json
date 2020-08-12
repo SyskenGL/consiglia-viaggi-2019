@@ -1,0 +1,25 @@
+{
+    "parameters": {
+        "filters": {
+            "review_id": null,
+            "accommodation_facility_id": null,
+            "reviewer_id": null,
+            "user_id": null,
+            "rating": [],
+            "season": [],
+            "status": []
+        },
+        "sort": {
+            "title": null,
+            "rating": null,
+            "date_of_stay": null,
+            "publication_date": null,
+            "total_likes": null,
+            "total_dislikes": null
+        },
+        "index": {
+            "offset": null,
+            "limit": null
+        }
+    }
+}

@@ -1,0 +1,3 @@
+{
+	"query": "SELECT review.review_id, review.accommodation_facility_id, review.user_id, review.title, review.description, review.rating, DATE_FORMAT(review.date_of_stay, \"%d %M %Y\") AS date_of_stay, DATE_FORMAT(review.publication_date, \"%d %M %Y\") AS publication_date, review.total_likes, review.total_dislikes, review.total_images, review.status, accommodation_facility.name AS accommodation_facility_name, IF(expected_cancellation_date IS NOT NULL, DATE_FORMAT(review.expected_cancellation_date, \"%d %M %Y\"), \"not expected\") AS expected_cancellation_date"
+}

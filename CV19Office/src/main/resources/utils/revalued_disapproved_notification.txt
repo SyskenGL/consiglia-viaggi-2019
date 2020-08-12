@@ -1,0 +1,2 @@
+Your review has been disapproved
+We are sorry $1, we revalued your review to the accommodation facility $2, published on $3, so we disapproved it.

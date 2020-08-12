@@ -1,0 +1,73 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- FullScreen Theme -->
+    <style name="Theme.MaterialComponents.NoActionBar.FullScreen" parent="@style/Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+    <!-- Material Custom TextField Theme -->
+    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.Long" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="fontFamily">@font/open_sans_light</item>
+        <item name="errorEnabled">false</item>
+        <item name="boxCornerRadiusBottomEnd">25dp</item>
+        <item name="boxCornerRadiusBottomStart">25dp</item>
+        <item name="boxCornerRadiusTopEnd">25dp</item>
+        <item name="boxCornerRadiusTopStart">25dp</item>
+        <item name="startIconTint">@color/darkBlue</item>
+        <item name="endIconTint">@color/darkBlue</item>
+        <item name="hintTextColor">@color/peach</item>
+        <item name="errorTextColor">@color/darkRed</item>
+        <item name="errorIconTint">@color/darkRed</item>
+        <item name="boxStrokeErrorColor">@color/darkRed</item>
+        <item name="boxStrokeColor">@color/peach</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+    <!-- Rating Bar -->
+    <style name="RatingBar" parent="android:style/Widget.Material.RatingBar.Small">
+        <item name="android:progressTint">@color/duskYellow</item>
+        <item name="android:progressBackgroundTint">@color/grayBlue</item>
+        <item name="android:secondaryProgressTint">@color/transparent</item>
+    </style>
+
+    <!-- Tag TextAppearance -->
+    <style name="TagTextAppearance" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Counter TextAppearance -->
+    <style name="CounterTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Transition Dialog Fragment -->
+    <style name="DialogFragmentAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+
+    <!-- Date Picker Theme -->
+    <style name="date_picker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/darkNavy</item>
+        <item name="colorControlActivated">@color/peach</item>
+        <item name="android:selectableItemBackgroundBorderless">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+</resources>

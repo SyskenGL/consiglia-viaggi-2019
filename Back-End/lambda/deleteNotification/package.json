@@ -1,0 +1,14 @@
+{
+  "name": "deletenotification",
+  "version": "1.0.0",
+  "description": "Funzione LAMBDA in Node per il DELETE delle notifiche.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FOX © 2019/20",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}

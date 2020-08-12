@@ -1,0 +1,12 @@
+{
+    "host": "RDS_DB_ENDPOINT",
+    "user": "AWS_USER",
+    "password": "DB_PASSWORD",
+    "database": "DB_NAME",
+    "bucketS3": "S3_BUCKET_NAME",
+    "accessKeyId": "AWS_ACCESS_KEY_ID",
+    "secretAccessKey": "AWS_SECRET_ACCESS_KEY",
+    "region": "AWS_REGION",
+    "userPoolId": "AWS_COGNITO_USER_POOL_ID",
+    "multipleStatements": false
+}

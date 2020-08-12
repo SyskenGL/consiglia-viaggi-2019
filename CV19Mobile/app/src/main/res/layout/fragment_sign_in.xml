@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_sign_in"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/fragment_sign_in_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay"
+        android:clickable="true"
+        tools:ignore="contentDescription" />
+
+    <com.scwang.wave.MultiWaveHeader
+        android:id="@+id/fragment_sign_in_waves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleY="-1"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:mwhCloseColor="@color/darkNavy"
+        app:mwhColorAlpha="0.7"
+        app:mwhProgress="1"
+        app:mwhStartColor="@color/darkNavy"
+        app:mwhVelocity="5"
+        app:mwhWaveHeight="30dp"
+        app:mwhWaves="MultiWave" />
+
+    <ImageView
+        android:id="@+id/fragment_sign_in_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:alpha="0"
+        android:src="@drawable/cv_app_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="contentDescription" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.Long"
+        android:id="@+id/fragment_sign_in_text_input_email_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_sign_in_hint_email"
+        app:startIconDrawable="@drawable/ic_email"
+        app:errorIconDrawable="@null"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_sign_in_text_input_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:fontFamily="@font/open_sans"
+            android:textColorHighlight="@color/peach"
+            android:textCursorDrawable="@null" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.Long"
+        android:id="@+id/fragment_sign_in_text_input_password_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_sign_in_hint_password"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:errorIconDrawable="@null"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_sign_in_text_input_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:fontFamily="@font/open_sans"
+            android:textColorHighlight="@color/peach"
+            android:textCursorDrawable="@null" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/fragment_sign_in_button_sign_in"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/fragment_sign_in_button_sign_in"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textIsSelectable="false"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:backgroundTint="@color/peach"
+        app:cornerRadius="25dp"
+        app:rippleColor="@color/darkNavy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.53">
+
+        <TextView
+            android:id="@+id/fragment_sign_in_text_view_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:text="@string/fragment_sign_in_text_view_forgot_password"
+            android:letterSpacing="0.05"
+            android:textSize="14sp" />
+
+        <Button
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:id="@+id/fragment_sign_in_button_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/fragment_sign_in_button_forgot_password"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:letterSpacing="0.05"
+            android:textColor="@drawable/button_text_style_peach_white"
+            android:textIsSelectable="false"
+            android:textSize="14sp"
+            app:rippleColor="@color/transparent" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

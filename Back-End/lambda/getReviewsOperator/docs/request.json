@@ -1,0 +1,11 @@
+{
+    "parameters": {
+        "filters": {
+            "status": []
+        },
+        "index": {
+            "offset": null,
+            "limit": null
+        }
+    }
+}

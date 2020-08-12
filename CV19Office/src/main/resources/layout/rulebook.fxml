@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1040.0" styleClass="wrapper-content" stylesheets="@../styles/dark-theme.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane layoutX="50.0" prefHeight="700.0" prefWidth="970.0" styleClass="rule-scroll-pane">
+         <content>
+            <Pane>
+               <children>
+                  <Pane prefHeight="161.0" prefWidth="940.0" styleClass="content-pane">
+                     <children>
+                        <Label layoutX="14.0" prefHeight="67.0" styleClass="label-section-name" text="Rule 1 - Lorem ipsum dolor sit amet" />
+                        <Label contentDisplay="CENTER" layoutX="15.0" layoutY="81.0" prefWidth="910.0" styleClass="label-rule" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac quam purus. Donec placerat hendrerit sapien a rhoncus. Nam ornare augue vitae mollis faucibus. Fusce interdum a metus quis ultrices. Vestibulum at erat consectetur, consequat felis sed, tempus elit. Praesent semper nibh ut dui molestie, vitae pulvinar felis dapibus. Aliquam dapibus mauris ac est interdum vehicula. Nam vitae felis urna. Curabitur at ornare libero. Nunc venenatis tortor nec lacinia mollis." textAlignment="JUSTIFY" translateY="-12.0" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="161.0" prefHeight="181.0" prefWidth="940.0" styleClass="content-pane" translateY="25.0">
+                     <children>
+                        <Label layoutX="14.0" prefHeight="67.0" styleClass="label-section-name" text="Rule 2 - Aliquam egestas bibendum" />
+                        <Label contentDisplay="CENTER" layoutX="15.0" layoutY="81.0" prefWidth="910.0" styleClass="label-rule" text="Aliquam egestas bibendum felis id tincidunt. Nam semper tempus ultricies. Pellentesque non ipsum ultricies, pretium ante eu, accumsan nibh. Etiam id nisi non lacus suscipit sodales. Sed consectetur in nulla a congue. Nullam convallis, sem id convallis luctus, arcu elit posuere felis, id eleifend nulla tellus ut elit. Nunc vitae pharetra justo. Phasellus at pharetra eros. Nunc odio orci, tempor a vehicula sit amet, lobortis sed diam. Proin rhoncus, augue in viverra faucibus, justo dolor vulputate risus, at mattis diam massa vel justo. Phasellus interdum leo in velit tincidunt, vitae blandit sem sagittis. In sodales vulputate enim quis malesuada." textAlignment="JUSTIFY" translateY="-12.0" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="367.0" prefHeight="219.0" prefWidth="940.0" styleClass="content-pane" translateY="25.0">
+                     <children>
+                        <Label layoutX="15.0" prefHeight="67.0" styleClass="label-section-name" text="Rule 3 - Sed diam urna" />
+                        <Label contentDisplay="CENTER" layoutX="15.0" layoutY="79.0" prefWidth="910.0" styleClass="label-rule" text="Sed diam urna, convallis a rutrum sit amet, commodo ac ipsum. Quisque varius orci non felis laoreet dictum. Donec imperdiet tincidunt viverra. Ut ullamcorper fermentum ante, blandit commodo magna elementum non. Nam volutpat eu est at dignissim. Nam tortor libero, tristique eget turpis maximus, convallis pretium eros. Aliquam erat volutpat. Mauris sollicitudin velit enim, sed ultricies quam rhoncus eget. Maecenas lobortis orci massa, non interdum ipsum imperdiet ut. Sed diam urna, convallis a rutrum sit amet, commodo ac ipsum. Quisque varius orci non felis laoreet dictum. Donec imperdiet tincidunt viverra. Ut ullamcorper fermentum ante, blandit commodo magna elementum non. Nam volutpat eu est at dignissim. Nam tortor libero, tristique eget turpis maximus, convallis pretium eros. Aliquam erat volutpat. Mauris sollicitudin velit enim, sed ultricies quam rhoncus eget. Maecenas lobortis orci massa, non interdum ipsum imperdiet ut." textAlignment="JUSTIFY" translateY="-12.0" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="611.0" prefHeight="181.0" prefWidth="940.0" styleClass="content-pane" translateY="25.0">
+                     <children>
+                        <Label layoutX="15.0" prefHeight="67.0" styleClass="label-section-name" text="Rule 4 - Donec luctus eget est vitae efficitur" />
+                        <Label contentDisplay="CENTER" layoutX="15.0" layoutY="81.0" prefWidth="910.0" styleClass="label-rule" text="Donec luctus eget est vitae efficitur. Suspendisse aliquet gravida nunc, a vehicula ante volutpat nec. Pellentesque suscipit scelerisque sapien, eu consequat justo lobortis vel. In ultricies pellentesque dolor at elementum. Aenean nec lacus ac sapien venenatis sodales. Praesent at ipsum tincidunt, blandit libero non, vulputate ante. Pellentesque quis mattis velit. In vulputate vel arcu id dictum. Ut eu dolor felis. Vestibulum at interdum sem, ut porttitor ante. Vestibulum condimentum felis purus, id imperdiet erat interdum eget. Pellentesque vel tempor sapien, at congue sapien. Aliquam a eros sem. Donec tempor vehicula auctor." textAlignment="JUSTIFY" translateY="-12.0" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="842.0" prefHeight="146.0" prefWidth="940.0" styleClass="content-pane">
+                     <children>
+                        <Label layoutX="15.0" prefHeight="67.0" styleClass="label-section-name" text="Rule 5 - Suspendisse mollis dictum enim" />
+                        <Label contentDisplay="CENTER" layoutX="15.0" layoutY="86.0" prefWidth="910.0" styleClass="label-rule" text="Suspendisse mollis dictum enim, ultricies elementum ex scelerisque eu. Sed cursus lectus leo, eu commodo velit consequat non. Etiam et aliquam mauris. Nulla velit est, vehicula vulputate ante ut, laoreet auctor ligula. Curabitur vel turpis augue. Nunc orci neque, mattis et gravida ac, congue eu metus. Vestibulum commodo dui tellus, quis rutrum mauris vehicula at. Nam sagittis facilisis est id interdum." textAlignment="JUSTIFY" translateY="-12.0" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </content></ScrollPane>
+   </children>
+</AnchorPane>

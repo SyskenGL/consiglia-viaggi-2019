@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Side Nav Menu -->
+    <string-array name="activity_navigation_titles_array_logged_in">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>My Favorites</item>
+        <item>My Reviews</item>
+        <item>Notifications</item>
+        <item>History</item>
+        <item>Sign out</item>
+    </string-array>
+
+    <array name="activity_navigation_icons_array_logged_in">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_face</item>
+        <item>@drawable/ic_favorite</item>
+        <item>@drawable/ic_review</item>
+        <item>@drawable/ic_notification</item>
+        <item>@drawable/ic_history</item>
+        <item>@drawable/ic_sign_out</item>
+    </array>
+
+    <string-array name="activity_navigation_titles_array_not_logged_in">
+        <item>Home</item>
+        <item>Sign in</item>
+    </string-array>
+
+    <array name="activity_navigation_icons_array_not_logged_in">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_account</item>
+    </array>
+
+</resources>

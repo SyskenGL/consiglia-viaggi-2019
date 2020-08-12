@@ -1,0 +1,11 @@
+{
+  "parameters": {
+      "title": null,
+      "description": null,
+      "rating": null,
+      "date_of_stay": null,
+      "total_images": null,
+      "accommodation_facility_id": null,
+      "user_id": null
+  }
+}

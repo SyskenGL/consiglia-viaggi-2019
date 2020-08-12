@@ -1,0 +1,31 @@
+{
+  "parameters": {
+    "keywords": null,
+    "filters": {
+      "accommodation_facility_id": null,
+      "name": null,
+      "type": null,
+      "country": null,
+      "administrative_area_level_1": null,
+      "administrative_area_level_2": null,
+      "administrative_area_level_3": null,
+      "locality": null,
+      "latitude": null,
+      "longitude": null,
+      "radius": null,
+      "rating": [],
+      "tags": [],
+      "user_id": null
+    },
+    "sort": {
+      "name": null,
+      "rating": null,
+      "total_favorites": null,
+      "total_views": null
+    },
+    "index": {
+      "offset": null,
+      "limit": null
+    }
+  }
+}

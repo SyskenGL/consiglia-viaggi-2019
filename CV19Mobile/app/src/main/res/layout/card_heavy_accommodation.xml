@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_heavy_accommodation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_heavy_accommodation_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:clickable="true"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/card_heavy_accommodation_image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:background="@color/gray"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="false"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorMarginBottom="20dp"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#FFF"
+                app:sliderIndicatorUnselectedColor="#a3a3a3"
+                app:sliderStartAutoCycle="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="25dp" >
+
+                <TextView
+                    android:id="@+id/card_heavy_accommodation_text_view_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/open_sans_bold" />
+
+                <TextView
+                    android:id="@+id/card_heavy_accommodation_text_view_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grayBlue"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/open_sans_bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp">
+
+                    <RatingBar
+                        style="@style/RatingBar"
+                        android:id="@+id/card_heavy_accommodation_rating_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:stepSize="0.1" />
+
+                    <TextView
+                        android:id="@+id/card_heavy_accommodation_text_view_views"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:gravity="bottom"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="12sp"
+                        android:drawableEnd="@drawable/ic_view_small"
+                        android:drawablePadding="3dp" />
+
+                    <TextView
+                        android:id="@+id/card_heavy_accommodation_text_view_reviews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:gravity="bottom"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="12sp"
+                        android:drawableTint="@color/duskYellow"
+                        android:drawableEnd="@drawable/ic_review_small"
+                        android:drawablePadding="3dp" />
+
+                    <TextView
+                        android:id="@+id/card_heavy_accommodation_text_view_favorites"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:gravity="bottom"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="12sp"
+                        android:drawableEnd="@drawable/ic_favorite_small"
+                        android:drawablePadding="3dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/card_heavy_accommodation_text_view_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/open_sans"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@color/grayBlue"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/card_heavy_accommodation_text_view_matched_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:textSize="12sp"
+                    android:textColor="@color/grayBlue"
+                    android:textAppearance="?attr/textAppearanceBody2" />
+
+                <HorizontalScrollView
+                    android:id="@+id/card_heavy_accommodation_tags_horizontal_scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:paddingTop="15dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/card_heavy_accommodation_type_flag"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:ignore="contentDescription" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/card_heavy_accommodation_button_favorite"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    app:sparkbutton_activeImage="@drawable/ic_favorite_red"
+                    app:sparkbutton_inActiveImage="@drawable/ic_favorite_border"
+                    app:sparkbutton_iconSize="30dp"
+                    app:sparkbutton_primaryColor="@color/white"
+                    app:sparkbutton_secondaryColor="@color/darkRed" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

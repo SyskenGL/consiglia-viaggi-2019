@@ -1,0 +1,11 @@
+{
+  	"parameters": {              
+		"filters": {
+	  		"user_id": null
+		},
+		"index": {               
+	  		"offset": null, 	   
+	  		"limit": null        
+		}
+  	}
+}

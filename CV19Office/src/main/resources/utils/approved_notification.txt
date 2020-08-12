@@ -1,0 +1,2 @@
+Your review has been approved
+Congratulations $1, your review to the accommodation facility $2, published on $3, has been approved.

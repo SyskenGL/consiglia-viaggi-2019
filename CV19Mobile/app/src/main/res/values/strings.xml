@@ -1,0 +1,218 @@
+<resources>
+
+    <string name="app_name">CV19Mobile</string>
+
+    <!-- Activity Start -->
+    <string name="activity_start_button_sign_in">Sign in</string>
+    <string name="activity_start_button_sign_up">Create an account</string>
+    <string name="activity_start_button_skip">Skip</string>
+
+    <!-- Opening Activity -->
+    <string name="opening_activity_app_name">CONSIGLIA VIAGGI</string>
+    <string name="opening_activity_powered_by">Powered by FOX \u00a9</string>
+
+    <!-- Notification Channel -->
+    <string name="notification_channel_name">CV19 Mobile</string>
+    <string name="notification_channel_description">Receive user notifications</string>
+
+    <!-- Motion Toast -->
+    <string name="motion_toast_success">Success</string>
+    <string name="motion_toast_error">Error</string>
+    <string name="motion_toast_warning">Warning</string>
+    <string name="motion_toast_info">Info</string>
+
+    <!-- Fragment Favorites -->
+    <string name="fragment_favorites_title">My Favorites</string>
+
+    <!-- Fragment History -->
+    <string name="fragment_history_title">History</string>
+
+    <!-- Fragment Notifications -->
+    <string name="fragment_notifications_title">Notifications</string>
+
+    <!-- Fragment Reviews -->
+    <string name="fragment_reviews_title">My Reviews</string>
+
+    <!-- Fragment Sign In -->
+    <string name="fragment_sign_in_hint_email">E-mail</string>
+    <string name="fragment_sign_in_hint_password">Password</string>
+    <string name="fragment_sign_in_button_sign_in">Sign in</string>
+    <string name="fragment_sign_in_text_view_forgot_password">Forgot your password?</string>
+    <string name="fragment_sign_in_button_forgot_password">Don\'t worry!</string>
+    <string name="fragment_sign_in_title">SIGN IN</string>
+    <string name="fragment_sign_in_invalid_auth">Invalid e-mail or password</string>
+    <string name="fragment_sign_in_invalid_email">Invalid e-mail format</string>
+    <string name="fragment_sign_in_enter_email">Enter your e-mail</string>
+    <string name="fragment_sign_in_enter_pass">Enter your password</string>
+
+    <!-- Fragment Change Password -->
+    <string name="fragment_change_password_old_password">Old password</string>
+    <string name="fragment_change_password_new_password">New password</string>
+    <string name="fragment_change_password_submit">Submit</string>
+    <string name="fragment_change_password_title_section_first">Let\'s</string>
+    <string name="fragment_change_password_title_section_second">Change It!</string>
+    <string name="fragment_change_password_subtitle_section_first">Enter your old password and</string>
+    <string name="fragment_change_password_subtitle_section_second">your new one as well then</string>
+    <string name="fragment_change_password_subtitle_section_third">submit</string>
+    <string name="fragment_change_password_incorrect_pass">The password is incorrect</string>
+    <string name="fragment_change_password_invalid_pass">Invalid password: must contain uppercase and lowercase letters and at least one numeric</string>
+    <string name="fragment_change_password_invalid_pass_len">Invalid password: must contain at least 6 characters</string>
+    <string name="fragment_change_password_enter_old_pass">Enter your old password</string>
+    <string name="fragment_change_password_enter_new_pass">Enter your new password</string>
+    <string name="fragment_change_password_same_pass">Passwords are the same!</string>
+
+    <!-- Fragment Sign Up -->
+    <string name="fragment_sign_up_hint_name">Name</string>
+    <string name="fragment_sign_up_hint_surname">Surname</string>
+    <string name="fragment_sign_up_hint_email">E-mail</string>
+    <string name="fragment_sign_up_hint_nickname">Nickname</string>
+    <string name="fragment_sign_up_hint_password">Password</string>
+    <string name="fragment_sign_up_button_sign_up">Sign up</string>
+    <string name="fragment_sign_up_user_exists">E-email already exists</string>
+    <string name="fragment_sign_up_invalid_pass">Invalid password: must contain uppercase and lowercase letters and at least one numeric</string>
+    <string name="fragment_sign_up_invalid_pass_len">Invalid password: must contain at least 6 characters</string>
+    <string name="fragment_sign_up_invalid_email">Invalid e-mail format</string>
+    <string name="fragment_sign_up_enter_name">Enter your name</string>
+    <string name="fragment_sign_up_enter_surname">Enter your surname</string>
+    <string name="fragment_sign_up_enter_email">Enter your e-mail</string>
+    <string name="fragment_sign_up_enter_nickname">Enter your nickname</string>
+    <string name="fragment_sign_up_enter_pass">Enter your password</string>
+
+    <!-- Fragment Confirmation -->
+    <string name="fragment_confirmation_text_view_no_code">Didn\'t get the code?</string>
+    <string name="fragment_confirmation_button_resend_code">Resend code</string>
+    <string name="fragment_confirmation_title_section_first">You\'re</string>
+    <string name="fragment_confirmation_title_section_second">Almost</string>
+    <string name="fragment_confirmation_title_section_third">There!</string>
+    <string name="fragment_confirmation_subtitle">We just sent a code over to</string>
+    <string name="fragment_confirmation_incorrect_code">The code entered is incorrect</string>
+    <string name="fragment_confirmation_correct_code">The code entered is correct</string>
+
+    <!-- Fragment Reviews Filters -->
+    <string name="fragment_reviews_filters_winter">Winter</string>
+    <string name="fragment_reviews_filters_summer">Summer</string>
+    <string name="fragment_reviews_filters_spring">Spring</string>
+    <string name="fragment_reviews_filters_autumun">Autumn</string>
+    <string name="fragment_reviews_filters_apply">Apply</string>
+    <string name="fragment_reviews_filters_reset">Reset</string>
+    <string name="fragment_reviews_filters_publication_date">Pub. Date</string>
+    <string name="fragment_reviews_filters_appreciation">Appreciation</string>
+    <string name="fragment_reviews_filters_rating">Rating</string>
+    <string name="fragment_reviews_filters_season">Season</string>
+    <string name="fragment_reviews_filters_filter_by">FILTER BY</string>
+    <string name="fragment_reviews_filters_order_by">ORDER BY</string>
+
+    <!-- Fragment Research Results Filters -->
+    <string name="fragment_research_results_filters_filter_by">FILTER BY</string>
+    <string name="fragment_research_results_filters_order_by">ORDER BY</string>
+    <string name="fragment_research_results_filters_apply">Apply</string>
+    <string name="fragment_research_results_filters_reset">Reset</string>
+    <string name="fragment_research_results_filters_rating">Rating</string>
+    <string name="fragment_research_results_filters_favorites">Favorites</string>
+    <string name="fragment_research_results_filters_views">Views</string>
+
+    <!-- Fragment Forgot Password Verification -->
+    <string name="fragment_forgot_password_verification_hint_email">E-mail</string>
+    <string name="fragment_forgot_password_verification_title_section_first">Let\'s</string>
+    <string name="fragment_forgot_password_verification_title_section_second">Solve it!</string>
+    <string name="fragment_forgot_password_verification_subtitle_section_first">Enter your email here,</string>
+    <string name="fragment_forgot_password_verification_subtitle_section_second">we will send you a</string>
+    <string name="fragment_forgot_password_verification_subtitle_section_third">verification code</string>
+    <string name="fragment_forgot_password_verification_enter_email">Enter your e-mail</string>
+    <string name="fragment_forgot_password_verification_invalid_email">Invalid e-mail format</string>
+    <string name="fragment_forgot_password_verification_email_not_exists">E-mail does not exist</string>
+
+    <!-- Fragment Forgot Password Recovery -->
+    <string name="fragment_forgot_password_recovery_hint_password">Password</string>
+    <string name="fragment_forgot_password_recovery_title_section_first">Just</string>
+    <string name="fragment_forgot_password_recovery_title_section_second">Another</string>
+    <string name="fragment_forgot_password_recovery_title_section_third">Effort!</string>
+    <string name="fragment_forgot_password_recovery_subtitle_section_first">Enter the new password</string>
+    <string name="fragment_forgot_password_recovery_subtitle_section_second">and the code we just sent you to</string>
+    <string name="fragment_forgot_password_recovery_incorrect_code">The code entered is incorrect</string>
+    <string name="fragment_forgot_password_recovery_correct_code">The code entered is correct</string>
+    <string name="fragment_forgot_password_recovery_enter_again">Enter code again</string>
+    <string name="fragment_forgot_password_recovery_invalid_pass">Invalid password: must contain uppercase and lowercase letters and at least one numeric</string>
+    <string name="fragment_forgot_password_recovery_invalid_pass_len">Invalid password: must contain at least 6 characters</string>
+
+    <!-- Fragment Home -->
+    <string name="fragment_home_title_section_first">Where Are\nWe Going Today?</string>
+    <string name="fragment_home_text_view_button_hotel">Hotel</string>
+    <string name="fragment_home_text_view_button_restaurants">Restaurants</string>
+    <string name="fragment_home_text_view_button_touristic_attractions">Attractions</string>
+    <string name="fragment_home_text_view_button_maps">Maps</string>
+    <string name="fragment_home_hint_research">Ask me whatever you want</string>
+    <string name="fragment_home_text_view_top_destinations">Best Destinations</string>
+    <string name="fragment_home_text_view_top_destinations_description">Discover the wonders of the world through the best destinations, the best resorts, the best restaurants, extraordinary and unmissable places.</string>
+
+    <!-- Heavy Accommodation Card -->
+    <string name="heavy_accommodation_card_matched_tags">The following keywords were found in the tags: </string>
+    <string name="heavy_accommodation_card_matched_reviews"> reviews matched</string>
+
+    <!-- Review Card -->
+    <string name="review_card_status">Status:</string>
+
+    <!-- Fragment Profile -->
+    <string name="fragment_profile_toggle_nickname">Nickname</string>
+    <string name="fragment_profile_toggle_real_name">Real name</string>
+    <string name="fragment_profile_account_created">Account created in</string>
+    <string name="fragment_profile_change_password">Change you password</string>
+    <string name="fragment_profile_here">here</string>
+    <string name="fragment_profile_email">E-mail</string>
+    <string name="fragment_profile_reviews">Total reviews</string>
+    <string name="fragment_profile_favorites">Total favorites</string>
+    <string name="fragment_profile_username">Username</string>
+
+    <!-- Fragment Accommodation Facility -->
+    <string name="fragment_accommodation_facility_info">Information</string>
+    <string name="fragment_accommodation_facility_reviews">Reviews</string>
+    <string name="fragment_accommodation_facility_related_places">Related Places</string>
+    <string name="fragment_accommodation_facility_filters">Filters</string>
+    <string name="fragment_accommodation_facility_map">Show on map</string>
+    <string name="fragment_accommodation_facility_address">Address</string>
+    <string name="fragment_accommodation_facility_phone">Phone</string>
+    <string name="fragment_accommodation_facility_website">Website</string>
+    <string name="fragment_accommodation_facility_email">E-mail</string>
+
+    <!-- Fragment Post Review -->
+    <string name="fragment_post_review_title">Review Title</string>
+    <string name="fragment_post_review_description">Review Description</string>
+    <string name="fragment_post_review_date_of_stay">Date of Stay</string>
+    <string name="fragment_post_review_share">Share</string>
+    <string name="fragment_post_review_enter_title">Enter review title</string>
+    <string name="fragment_post_review_enter_description">Enter review description</string>
+    <string name="fragment_post_review_enter_date_of_stay">Enter date of stay</string>
+    <string name="fragment_post_review_invalid_title">Title must contain at least 30 characters</string>
+    <string name="fragment_post_review_enter_invalid_description">Title must contain at least 150 characters</string>
+    <string name="fragment_post_review_thank_you">Thank You!</string>
+    <string name="fragment_post_review_thank_description">Thanks for your feedback, an operator will review it as soon as possible. You will receive a notification with the outcome of the review.</string>
+    <string name="fragment_post_review_get_it">I get it</string>
+
+    <!-- Info -->
+    <string name="info_no_results_found">No results found</string>
+    <string name="info_no_results_found_description">We are sorry! We did not find any accommodation facility matching your request.</string>
+    <string name="info_error">Something went wrong</string>
+    <string name="info_error_description">We are sorry! An error has occurred.\nHowever please forgive the developers and try again.</string>
+    <string name="info_hurry_up">Hurry up!</string>
+    <string name="info_sleep">…ZzZ</string>
+    <string name="info_empty_favorites">There are no favorites. \nWhat are you waiting for?!</string>
+    <string name="info_empty_notifications">Currently you have not pending notifications. Don\'t worry, we will notify you.</string>
+    <string name="info_empty_reviews">You have not written any reviews, what are you waiting for?!</string>
+    <string name="info_empty_history">Your history is empty. Come on, visit some accommodation facilities.</string>
+
+    <!-- Toast messages -->
+    <string name="toast_warning_internet_connection">Please check your internet connection or try again later.</string>
+    <string name="toast_error_network_error">A network error has occurred, try again later.</string>
+    <string name="toast_error_unknown_error">An unknown error occurred, try again.</string>
+    <string name="toast_success_resend_code">New code sent, check your e-mail.</string>
+    <string name="toast_info_limit_exceeded">Slow down! You are sending too many requests.</string>
+    <string name="toast_info_results_finished">There are no more results to show.</string>
+    <string name="toast_success_password_changed">Your password has been changed successfully.</string>
+    <string name="toast_warning_gps_disabled">You cannot use this function without GPS.</string>
+    <string name="toast_success_gps_enabled">GPS enabled successfully, click the GPS button again.</string>
+    <string name="toast_warning_permission_denied">The application does not have the necessary permissions.</string>
+    <string name="toast_warning_duplicate_images">Duplicate images not allowed!</string>
+    <string name="toast_success_permission_granted">The application now has permission to use the geolocation, click the GPS button again.</string>
+    <string name="toast_info_not_logged">You must be logged in order to use this feature.</string>
+
+</resources>

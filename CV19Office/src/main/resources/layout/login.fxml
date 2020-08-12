@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane minWidth="-Infinity" prefHeight="471.0" prefWidth="340.0" styleClass="dialog-pane" stylesheets="@../styles/dark-theme.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox layoutX="284.0" spacing="7.0" translateX="-12.0" translateY="12.0">
+            <children>
+                <Circle fx:id="buttonClose" fill="#f55164" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                <Circle fx:id="buttonMinimize" fill="#ebcd38" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                <Circle fx:id="buttonMaximize" fill="#4fbd81" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            </children>
+        </HBox>
+        <Pane layoutX="32.0" layoutY="255.0" prefHeight="60.0" prefWidth="280.0" styleClass="content-pane" translateY="15.0">
+            <children>
+                <PasswordField fx:id="textFieldPassword" layoutX="60.0" layoutY="16.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="Password" styleClass="text-field" />
+                <ImageView fx:id="iconPassword" fitHeight="24.0" fitWidth="24.0" layoutX="21.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/ic_lock.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Label contentDisplay="RIGHT" layoutX="114.0" layoutY="452.0" styleClass="label-powered" text="Powered by FOX ©" translateY="-3.0">
+            <graphic>
+                <ImageView fitHeight="11.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/ic_fox_logo.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Label>
+        <Button fx:id="buttonSignIn" layoutX="-41.0" layoutY="376.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" styleClass="button-sign-in" text="Sign in" translateX="120.0" />
+        <ImageView fitHeight="115.0" fitWidth="200.0" layoutX="12.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" translateX="100.0">
+            <image>
+                <Image url="@../icons/ic_cv_logo.png" />
+            </image>
+        </ImageView>
+      <Pane layoutX="32.0" layoutY="192.0" prefHeight="60.0" prefWidth="280.0" styleClass="content-pane">
+         <children>
+            <ImageView fx:id="iconUsername" fitHeight="24.0" fitWidth="24.0" layoutX="21.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/ic_user.png" />
+               </image>
+            </ImageView>
+                <TextField fx:id="textFieldUsername" layoutX="60.0" layoutY="16.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="Username" styleClass="text-field" />
+         </children>
+      </Pane>
+      <Label fx:id="labelSignInError" alignment="CENTER" layoutX="33.0" layoutY="338.0" prefWidth="280.0" />
+    </children>
+</AnchorPane>
